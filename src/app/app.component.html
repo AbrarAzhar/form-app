@@ -1,0 +1,161 @@
+<!-- your-component.component.html -->
+
+<form [formGroup]="form">
+  <div class="parent">
+    <div class="div1">
+      <div class="main">
+        <h1>F A S T</h1>
+        <h2>Functional Analysis Screening Tool</h2>
+      </div>
+      <div class="data">
+        <div class="row1">
+          <label for="client">Client:</label>
+          <input type="text" id="client" name="client" placeholder="Enter client's name" formControlName="client">
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" formControlName="date">
+        </div>
+        <div class="row2">
+          <label for="informant">Informant:</label>
+          <input type="text" id="informant" name="informant" placeholder="Enter informant's name" formControlName="informant">
+
+          <label for="interviewer">Interviewer:</label>
+          <input type="text" id="interviewer" name="interviewer" placeholder="Enter interviewer's name" formControlName="interviewer">
+        </div>
+      </div>
+      <div class="container">
+        <p>
+          <strong>The Interviewer: </strong> the Interviewer: The FAST identifies factors that may influence problem behaviors. Use it only for screening as part of a comprehensive functional analysis of the behavior. Administer the FAST to several individuals who interact with the client frequently. Then use the results to guide direct observation in several different situations to verify suspected behavioral functions and to identify other factors that may influence the problem behavior. <br /><br />
+          <strong>To the Informant: </strong>Complete the sections below. Then read each question carefully and answer it by circling "Yes" or "No." If you are uncertain about an answer, circle “N/A.”
+        </p>
+      </div>
+
+      <div class="div3">
+        <h3>Informant-Client Relationship</h3>
+        <ol>
+          <li>
+            Indicate your relationship to the person:
+            <input type="text" name="relationship" style="border-bottom: 1px dotted;" formControlName="relationship">
+            <label><input type="checkbox" name="relationship_other" formControlName="relationship_other"> Other</label>
+          </li>
+          <li>
+            How long have you known the person?
+            <input type="text" name="know_years" style="border-bottom: 1px dotted; width: 40px;" formControlName="know_years"> Years
+            <input type="text" name="know_months" style="border-bottom: 1px dotted; width: 40px;" formControlName="know_months"> Months
+          </li>
+          <li>
+            Do you interact with the person daily?
+            <label><input type="radio" name="interact_daily" value="yes" formControlName="interact_daily"> Yes</label>
+            <label><input type="radio" name="interact_daily" value="no" formControlName="interact_daily"> No</label>
+          </li>
+          <li>
+            In what situations do you usually interact with the person?
+            <ul>
+              <li><label><input type="checkbox" name="situation_meals" formControlName="situation_meals"> Meals</label></li>
+              <li><label><input type="checkbox" name="situation_leisure" formControlName="situation_leisure"> Leisure</label></li>
+              <li><label><input type="checkbox" name="situation_self_care" formControlName="situation_self_care"> Self-care</label></li>
+              <li><label><input type="checkbox" name="situation_academic" formControlName="situation_academic"> Academic training</label></li>
+              <li><label><input type="checkbox" name="situation_vocational" formControlName="situation_vocational"> Work or vocational training</label></li>
+              <li><label><input type="checkbox" name="situation_other" formControlName="situation_other"> Other</label> <input type="text" name="situation_other_text" style="border-bottom: 1px dotted;" formControlName="situation_other_text"></li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>Problem Behavior Information</h3>
+        <ol start="2">
+          <li>
+            Problem behavior (check and describe):
+            <ul>
+              <li><label><input type="checkbox" name="problem_aggression" formControlName="problem_aggression"> Aggression</label> <input type="text" name="problem_aggression_desc" style="border-bottom: 1px dotted;" formControlName="problem_aggression_desc"></li>
+              <li><label><input type="checkbox" name="problem_self_injury" formControlName="problem_self_injury"> Self-Injury</label> <input type="text" name="problem_self_injury_desc" style="border-bottom: 1px dotted;" formControlName="problem_self_injury_desc"></li>
+              <li><label><input type="checkbox" name="problem_stereotypy" formControlName="problem_stereotypy"> Stereotypy</label> <input type="text" name="problem_stereotypy_desc" style="border-bottom: 1px dotted;" formControlName="problem_stereotypy_desc"></li>
+              <li><label><input type="checkbox" name="problem_destruction" formControlName="problem_destruction"> Property destruction</label> <input type="text" name="problem_destruction_desc" style="border-bottom: 1px dotted;" formControlName="problem_destruction_desc"></li>
+              <li><label><input type="checkbox" name="problem_other" formControlName="problem_other"> Other</label> <input type="text" name="problem_other_desc" style="border-bottom: 1px dotted;" formControlName="problem_other_desc"></li>
+            </ul>
+          </li>
+          <li>
+            Frequency:
+            <input type="text" name="frequency" style="border-bottom: 1px dotted; width: 80px;" formControlName="frequency">
+          </li>
+          <li>
+            Severity:
+            <input type="text" name="severity" style="border-bottom: 1px dotted; width: 80px;" formControlName="severity">
+          </li>
+          <li>
+            Frequency:
+            <input type="text" name="frequency" style="border-bottom: 1px dotted; width: 80px;" formControlName="frequency">
+          </li>
+          <li>
+            Severity:
+            <input type="text" name="severity" style="border-bottom: 1px dotted; width: 80px;" formControlName="severity">
+          </li>
+          <li>
+            Situations in which the problem behavior is most likely to occur:
+            <ul>
+              <li>Days/Times <input type="text" name="likely_occur_days_times" style="border-bottom: 1px dotted;" formControlName="likely_occur_days_times"></li>
+              <li>Settings/Activities <input type="text" name="likely_occur_settings_activities" style="border-bottom: 1px dotted;" formControlName="likely_occur_settings_activities"></li>
+              <li>Persons present <input type="text" name="likely_occur_persons_present" style="border-bottom: 1px dotted;" formControlName="likely_occur_persons_present"></li>
+            </ul>
+          </li>
+          <li>
+            Situations in which the problem behavior is least likely to occur:
+            <ul>
+              <li>Days/Times <input type="text" name="least_likely_occur_days_times" style="border-bottom: 1px dotted;" formControlName="least_likely_occur_days_times"></li>
+              <li>Settings/Activities <input type="text" name="least_likely_occur_settings_activities" style="border-bottom: 1px dotted;" formControlName="least_likely_occur_settings_activities"></li>
+              <li>Persons present <input type="text" name="least_likely_occur_persons_present" style="border-bottom: 1px dotted;" formControlName="least_likely_occur_persons_present"></li>
+            </ul>
+          </li>
+          <li>
+            What is usually happening to the person right before the problem behavior occurs?
+            <textarea name="before_behavior" style="border: 1px dotted;" formControlName="before_behavior"></textarea>
+          </li>
+          <li>
+            What usually happens to the person right after the problem behavior occurs?
+            <textarea name="after_behavior" style="border: 1px dotted;" formControlName="after_behavior"></textarea>
+          </li>
+          <li>
+            Current treatments:
+            <textarea name="current_treatments" style="border: 1px dotted;" formControlName="current_treatments"></textarea>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="div2">
+      <ol>
+        <li>
+          Does the problem behavior occur when the person is not receiving attention or when caregivers are paying attention to someone else?
+          <label><input type="radio" name="q1" value="yes" formControlName="q1"> Yes</label>
+          <label><input type="radio" name="q1" value="no" formControlName="q1"> No</label>
+          <label><input type="radio" name="q1" value="na" formControlName="q1"> N/A</label>
+        </li>
+        <!-- More list items for other questions -->
+      </ol>
+      <div class="scoring-summary">
+        <h3>Scoring Summary</h3>
+        <div class="question-group">
+          <label>Circle the number of each question that was answered “Yes” and enter the number of items that were circled in the “Total” column.</label>
+          <div class="yes-no-inputs">
+            <input type="number" class="yes-count" min="0" formControlName="yes_count">
+            <span>Total</span>
+          </div>
+        </div>
+        <div class="question-group">
+          <label>Items Circled “Yes” Total</label>
+          <div class="yes-no-inputs">
+            <input type="text" class="item-circled" formControlName="item_circled">
+            <span>Total</span>
+          </div>
+        </div>
+        <div class="question-group">
+          <label>Potential Source of Reinforcement</label>
+          <div class="yes-no-inputs">
+            <input type="text" class="source-reinforcement" formControlName="source_reinforcement">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn-donate" (click)="onSUBMIT()">
+        Submit</button>
+    </div>
+  </div>
+  
+</form>
